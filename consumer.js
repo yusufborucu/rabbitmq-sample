@@ -10,7 +10,9 @@ async function connect_rabbitmq() {
   await channel.assertQueue("emailQueue")
 
   channel.consume("emailQueue", email => {
-    console.log("Email address: ", email.content.toString())
+    let mail_address = email.content.toString()
+    let content = `${mail_address} ile kayıt olduğunuz için teşekkür ederiz.`
+    console.log("Giden mail: ", content)
 
     channel.ack(email)
   })

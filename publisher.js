@@ -12,7 +12,7 @@ async function connect_rabbitmq() {
   for (let i = 1; i <= 10; i++) {
     let email = `test${i}@mail.com`
 
-    console.log("Email address: ", email)
+    console.log("Kayıt olan mail adresi: ", email)
 
     channel.sendToQueue("emailQueue", Buffer.from(JSON.stringify(email)))  
   }
