@@ -1,0 +1,17 @@
+{
+  "name": "rabbitmq-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "publisher": "node publisher",
+    "consumer": "node consumer"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.7.1",
+    "dotenv": "^10.0.0"
+  }
+}
